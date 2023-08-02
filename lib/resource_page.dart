@@ -10,13 +10,15 @@ class ResourcePage extends StatelessWidget {
     return Scaffold(
         appBar:AppBar(
           title: Text('Resource Page'),
-          backgroundColor:  Color.fromARGB(255, 91, 124, 253),
+          backgroundColor: primaryColor,
         ),      
       body: ListView(
         children: [
           Center(
             //child: Image.asset('image/assets/resource.png')
-            child: Center(child: Image.asset("images/resource.jpg")),
+            child: Center(child: Image.asset("images/resource1.png",
+            height: 270,
+            width: 250,)),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -35,21 +37,21 @@ class ResourcePage extends StatelessWidget {
                     offset: const Offset(0, 3), // changes position of shadow
                   ),
                 ],
-                ),  
+                ),
+
+                //tv 
               child:  Row(
                 children: [
-              const Padding(
-                padding: EdgeInsets.all(20.0),
-                child: Icon(
-                  Icons.tv,
-                  color: primaryColor,
-                  size:75,
+               Center(
+                child:  Image.asset(
+                 "images/tv.png"
                 ),
                 ),
+
                 Text('TV',
                 style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 28,
+                fontSize: 25,
                 color:  primaryColor,
                 fontWeight: FontWeight.w700,
                ),
@@ -62,12 +64,12 @@ class ResourcePage extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.only(left: 12, bottom: 1),
                   child: LinearPercentIndicator(
-                  width: 150.0,
+                  width: 100.0,
                   lineHeight: 10.0,
-                  percent: 20/100,
+                  percent: 10/100,
                   animation: true,
                   animationDuration: 1500,
-                  trailing: new Text("20", style: TextStyle(fontSize: 20),),
+                  trailing: new Text("10", style: TextStyle(fontSize: 20),),
                   progressColor: Colors.blueAccent,
                   ),
                 ),
@@ -79,7 +81,7 @@ class ResourcePage extends StatelessWidget {
         
                 )),
 
-          //tv
+          //hdmi
              Padding(
             padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -100,69 +102,99 @@ class ResourcePage extends StatelessWidget {
                 ),  
                 child:  Row(
               children: [
-              const Padding(
-                padding: EdgeInsets.all(20.0),
-                child: Icon(
-                  Icons.tv,
-                  color: primaryColor,
-                  size:75,
+              Center(
+                child:  Image.asset(
+                 "images/hdmi.png"
                 ),
                 ),
                 Text('HDMI',
                 style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 28,
+                fontSize: 25,
                 color:  primaryColor,
                 fontWeight: FontWeight.w700,
                ),
                 softWrap: false,
                 ),
+                Column(
+                 mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 12, bottom: 1),
+                  child: LinearPercentIndicator(
+                  width: 100.0,
+                  lineHeight: 10.0,
+                  percent: 15/100,
+                  animation: true,
+                  animationDuration: 1500,
+                  trailing: new Text("15", style: TextStyle(fontSize: 20),),
+                  progressColor: Colors.blueAccent,
+                  ),
+                ),
+              ),
+                  ],
+                ) 
                 ],              
                 ),
                 )),     
 
-                //
-                  Padding(
-                  padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      height: 150, 
-                      width: 250,
-                      decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        borderRadius: BorderRadius.circular(20.0),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Color.fromARGB(255, 164, 164, 164).withOpacity(0.5),
-                        spreadRadius: 3,
-                        blurRadius: 8,
-                        offset: const Offset(0, 3), // changes position of shadow
-                      ),
-                    ],
+                //drone
+                    Padding(
+            padding: const EdgeInsets.all(8.0),
+              child: Container(
+                height: 150, 
+                width: 250,
+                decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20.0),
+                // border: Border.all(width: 1.0, color: Color.fromARGB(255, 194, 214, 244)),
+                boxShadow: [
+                  BoxShadow(
+                    color: Color.fromARGB(255, 164, 164, 164).withOpacity(0.5),
+                    spreadRadius: 3,
+                    blurRadius: 8,
+                    offset: const Offset(0, 3), // changes position of shadow
+                  ),
+                ],
                 ),  
-              child:  Row(
+                child:  Row(
               children: [
-              const Padding(
-                padding: EdgeInsets.all(20.0),
-                child: Icon(
-                  Icons.tv,
-                  color: primaryColor,
-                  //color: Color.fromARGB(255, 91, 124, 253),
-                  size:75,
+              Center(
+                child:  Image.asset(
+                 "images/drone.png"
                 ),
                 ),
-                Text('RESOURCES',
+                Text('DRONE',
                 style: TextStyle(
                 fontFamily: 'Segoe UI',
                 fontSize: 25,
-                // color: Colors.black,
                 color:  primaryColor,
                 fontWeight: FontWeight.w700,
                ),
                 softWrap: false,
                 ),
-               
-            ],
-          ),
+                Column(
+                 mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 12, bottom: 1),
+                  child: LinearPercentIndicator(
+                  width: 100.0,
+                  lineHeight: 10.0,
+                  percent: 5/100,
+                  animation: true,
+                  animationDuration: 1500,
+                  trailing: new Text("15", style: TextStyle(fontSize: 20),),
+                  progressColor: Colors.blueAccent,
+                  ),
+                ),
+              ),
+                  ],
+                ) 
+                ],              
+                ),
                 )), 
         ],
       ),
