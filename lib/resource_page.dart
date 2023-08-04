@@ -20,6 +20,7 @@ class ResourcePage extends StatelessWidget {
             height: 270,
             width: 250,)),
           ),
+       
           Padding(
             padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -51,7 +52,7 @@ class ResourcePage extends StatelessWidget {
                 Text('TV',
                 style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 25,
+                fontSize: 22,
                 color:  primaryColor,
                 fontWeight: FontWeight.w700,
                ),
@@ -107,10 +108,10 @@ class ResourcePage extends StatelessWidget {
                  "images/hdmi.png"
                 ),
                 ),
-                Text('HDMI',
+                Text('Hdmi',
                 style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 25,
+                fontSize: 22,
                 color:  primaryColor,
                 fontWeight: FontWeight.w700,
                ),
@@ -165,10 +166,10 @@ class ResourcePage extends StatelessWidget {
                  "images/drone.png"
                 ),
                 ),
-                Text('DRONE',
+                Text('Drone',
                 style: TextStyle(
                 fontFamily: 'Segoe UI',
-                fontSize: 25,
+                fontSize: 22,
                 color:  primaryColor,
                 fontWeight: FontWeight.w700,
                ),
@@ -186,7 +187,7 @@ class ResourcePage extends StatelessWidget {
                   percent: 5/100,
                   animation: true,
                   animationDuration: 1500,
-                  trailing: new Text("15", style: TextStyle(fontSize: 20),),
+                  trailing: new Text("5", style: TextStyle(fontSize: 20),),
                   progressColor: Colors.blueAccent,
                   ),
                 ),
@@ -196,6 +197,63 @@ class ResourcePage extends StatelessWidget {
                 ],              
                 ),
                 )), 
+
+                Padding(
+            padding: const EdgeInsets.all(8.0),
+              child: Container(
+                height: 150, 
+                width: 250,
+                decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20.0),
+                // border: Border.all(width: 1.0, color: Color.fromARGB(255, 194, 214, 244)),
+                boxShadow: [
+                  BoxShadow(
+                    color: Color.fromARGB(255, 164, 164, 164).withOpacity(0.5),
+                    spreadRadius: 3,
+                    blurRadius: 8,
+                    offset: const Offset(0, 3), // changes position of shadow
+                  ),
+                ],
+                ),  
+                child:  Row(
+              children: [
+              Center(
+                child:  Image.asset(
+                 "images/drone.png"
+                ),
+                ),
+                Text('Drone',
+                style: TextStyle(
+                fontFamily: 'Segoe UI',
+                fontSize: 22,
+                color:  primaryColor,
+                fontWeight: FontWeight.w700,
+               ),
+                softWrap: false,
+                ),
+                Column(
+                 mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 12, bottom: 1),
+                  child: LinearPercentIndicator(
+                  width: 100.0,
+                  lineHeight: 10.0,
+                  percent: 5/100,
+                  animation: true,
+                  animationDuration: 1500,
+                  trailing: new Text("5", style: TextStyle(fontSize: 20),),
+                  progressColor: Colors.blueAccent,
+                  ),
+                ),
+              ),
+                  ],
+                ) 
+                ],              
+                ),
+                )),
         ],
       ),
     );

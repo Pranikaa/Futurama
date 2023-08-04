@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:futuramaa/branding_page.dart';
 import 'package:futuramaa/home_page.dart';
+import 'package:futuramaa/iot_page.dart';
+import 'package:futuramaa/oic.dart';
+import 'package:futuramaa/oic_page.dart';
+import 'package:futuramaa/resource2.dart';
 import 'package:futuramaa/resource_page.dart';
+import 'package:futuramaa/visiting_pagee.dart';
 import 'package:get/get.dart';
 
 class NavBar extends StatelessWidget {
@@ -37,13 +42,14 @@ class NavBar extends StatelessWidget {
             ListTile(
               leading: Icon(Icons.smart_toy_outlined),
               title: Text('IOT Projects'),
-              onTap: () => print("IOT Project tapped"),
+              onTap: () => Get.to((IOTPage())),
               iconColor: Colors.blue,
             ),
             ListTile(
               leading: Icon(Icons.groups_3_sharp),
               title: Text('OIC'),
-              onTap: () => print("OIC tapped"),
+              //onTap: () => Get.to((OICPage())),
+              onTap: () => Get.to((OICPage())),
               iconColor: Colors.blue,
             ),
             ExpansionTile(title: Text('Operations'),
@@ -67,7 +73,7 @@ class NavBar extends StatelessWidget {
             ListTile(
               leading: Icon(Icons.location_on_outlined),
               title: Text('Visiting'),
-              onTap: () => print("OIC tapped"),
+              onTap: () => Get.to(()=> VisitingPage()),
               iconColor: Colors.blue,
             ),
             

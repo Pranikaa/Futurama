@@ -65,9 +65,9 @@ class WelcomePage extends StatelessWidget{
                         ),
                         ),
                     ),
-                      SizedBox(height: 15),
+                      SizedBox(height: 10),
                       Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 40, ),
+                        padding: EdgeInsets.symmetric(horizontal: 30, ),
                         child: Text(
                           "FUTURAMA: an exclusive IT based event,\nHappening Now.",
                           textAlign: TextAlign.center,
@@ -77,7 +77,7 @@ class WelcomePage extends StatelessWidget{
                           ),
                           ),
                           ),
-                        SizedBox(height: 60),
+                        SizedBox(height: 45),
                         Material(
                           color: Color.fromARGB(255, 91, 124, 253),
                           borderRadius: BorderRadius.circular(10),

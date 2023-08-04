@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:futuramaa/welcome_page.dart';
 import 'package:get/get.dart';
 
+import 'loader.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -12,11 +14,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
+        fontFamily: 'Poppins'
       ),
-      home: WelcomePage(),
+      initialRoute: '/',
+      routes: {
+        '/':(context)=>LogoLoaderScreen(),
+        '/welcome':(context)=>WelcomePage()
+      },
     );
   }
 }
